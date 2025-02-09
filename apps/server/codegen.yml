@@ -1,0 +1,13 @@
+schema: "./schema.graphql"
+generates:
+  src/generated/resolvers-types.ts:
+    plugins:
+      - "typescript"
+      - "typescript-resolvers"
+  src/generated/resolvers.ts:
+    plugins:
+      - "typescript-resolvers"
+      - add:
+          content: "import { Resolvers } from './resolvers-types';\n"
+      - "typescript"
+      - "typescript-resolvers"

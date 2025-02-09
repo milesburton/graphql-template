@@ -1,0 +1,15 @@
+{
+  "name": "graphql-template",
+  "private": true,
+  "workspaces": ["apps/server", "apps/client"],
+  "scripts": {
+    "dev": "docker-compose up --build",
+    "start": "pnpm --filter server generate && pnpm --filter client generate && pnpm dev",
+    "generate": "pnpm --filter server generate && pnpm --filter client generate",
+    "deploy": "netlify deploy --prod"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0",
+    "netlify-cli": "^16.1.0"
+  }
+}

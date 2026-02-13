@@ -5,7 +5,7 @@
     "generate": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
-    "@graphql-yoga/node": "^2.0.0",
+    "@graphql-yoga/node": "^3.9.1",
     "graphql": "^16.6.0"
   },
   "devDependencies": {
